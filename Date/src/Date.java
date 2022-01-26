@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Date {
@@ -24,16 +23,16 @@ public class Date {
     setDate(1, 1, year);
   }
 
-  public Date(Date userDate) {
-    if (userDate == null)// Not a real date.
+  public Date(Date aDate) {
+    if (aDate == null)// Not a real date.
     {
       System.out.println("Fatal Error.");
       System.exit(0);
     }
 
-    month = userDate.month;
-    day = userDate.day;
-    year = userDate.year;
+    month = aDate.month;
+    day = aDate.day;
+    year = aDate.year;
   }
 
   public void setDate(int monthInt, int day, int year) {
@@ -87,8 +86,8 @@ public class Date {
   }
 
   public int getMonth() {
-    
-    switch(month) {
+
+    switch (month) {
       case "January":
         return 1;
       case "February":
@@ -113,10 +112,10 @@ public class Date {
         return 11;
       case "December":
         return 12;
-       default:
-         System.out.println("Fatal Error");
-         System.exit(0);
-         return 0;
+      default:
+        System.out.println("Fatal Error");
+        System.exit(0);
+        return 0;
     }
   }
 
@@ -132,8 +131,8 @@ public class Date {
     return (month + " " + day + ", " + year);
   }
 
-  public boolean equals(Date anotherDate) {
-    return ((month.equals(anotherDate.month)) && (day == anotherDate.day) && (year == anotherDate.year));
+  public boolean equals(Date otherDate) {
+    return ((month.equals(otherDate.month)) && (day == otherDate.day) && (year == otherDate.year));
   }
 
   public boolean precedes(Date otherDate) {
@@ -202,7 +201,7 @@ public class Date {
   }
 
   String monthString(int monthNumber) {
-    
+
     switch (monthNumber) {
       case 1:
         return "January";

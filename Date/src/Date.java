@@ -24,16 +24,16 @@ public class Date {
     setDate(1, 1, year);
   }
 
-  public Date(Date aDate) {
-    if (aDate == null)// Not a real date.
+  public Date(Date userDate) {
+    if (userDate == null)// Not a real date.
     {
       System.out.println("Fatal Error.");
       System.exit(0);
     }
 
-    month = aDate.month;
-    day = aDate.day;
-    year = aDate.year;
+    month = userDate.month;
+    day = userDate.day;
+    year = userDate.year;
   }
 
   public void setDate(int monthInt, int day, int year) {
@@ -132,8 +132,8 @@ public class Date {
     return (month + " " + day + ", " + year);
   }
 
-  public boolean equals(Date otherDate) {
-    return ((month.equals(otherDate.month)) && (day == otherDate.day) && (year == otherDate.year));
+  public boolean equals(Date anotherDate) {
+    return ((month.equals(anotherDate.month)) && (day == anotherDate.day) && (year == anotherDate.year));
   }
 
   public boolean precedes(Date otherDate) {
